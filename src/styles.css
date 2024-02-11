@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+.timer {
+  position: absolute;
+  top: 3rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.quote-container {
+  padding: 1rem;
+  width: 700px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-answer {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.quote-input {
+  width: 90%;
+  height: 8rem;
+  border: 2px solid #ccc;
+  padding: 10px;
+  outline: none;
+  resize: none;
+  margin: auto;
+  text-align: center;
+  font-size: 1rem;
+}
+
+@media (max-width: 400px) {
+  .quote-input {
+    padding: 5px;
+  }
+}
+
+.quote-input:focus {
+  border-color: black;
+}
