@@ -33,8 +33,9 @@ body {
 .quote-input {
   width: 90%;
   height: 8rem;
-  border: 2px solid #ccc;
-  padding: 10px;
+  border: 2px solid #111;
+  border-radius: 10px;
+  padding: 15px;
   outline: none;
   resize: none;
   margin: auto;
@@ -49,7 +50,7 @@ body {
 }
 
 .quote-input:focus {
-  border-color: black;
+  border-color: #777;
 }
 
 .correct {
