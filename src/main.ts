@@ -1,11 +1,15 @@
 import "./styles.css";
 import { getRandomQuote } from "./API/getRandomQuote";
 import { quoteCharacterClassName } from "./contants";
+import { Timer } from "./Class/Timer";
 
 const quoteAnswer = document.getElementById("quote-answer") as HTMLDivElement;
 const quoteInput = document.getElementById(
   "quote-input"
 ) as HTMLTextAreaElement;
+const timerElement = document.getElementById("timer") as HTMLDivElement;
+
+const timer: Timer = new Timer(timerElement);
 
 quoteInput.addEventListener("input", () => {
   if (checkAnswer()) setNewQuoteAnswer();
@@ -29,6 +33,8 @@ async function setNewQuoteAnswer(): Promise<void> {
       });
 
     quoteAnswer.append(...characterSpans);
+
+    timer.startTimer(new Date());
   } catch (err) {
     console.error(err);
     alert(err);
