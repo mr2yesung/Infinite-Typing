@@ -1,4 +1,4 @@
-const URL_RANDOM_QUOTE = "http://api.quotable.io/random";
+const URL_RANDOM_QUOTE = "https://api.quotable.io/random";
 
 async function getRandomQuote(): Promise<string | null> {
   try {
