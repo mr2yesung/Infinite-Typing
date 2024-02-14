@@ -22,7 +22,7 @@ class Timer {
   }
 
   clearTimer(): void {
-    if (this.timer != null) console.log("delete tiemr");
+    if (this.timer != null) clearInterval(this.timer);
   }
 }
 
