@@ -1,5 +1,6 @@
 import "./styles.css";
 import { getRandomQuote } from "./API/getRandomQuote";
+import { quoteCharacterClassName } from "./contants";
 
 const quoteAnswer = document.getElementById("quote-answer") as HTMLDivElement;
 const quoteInput = document.getElementById(
@@ -41,7 +42,16 @@ function checkAnswer(): boolean {
 
   let correct: boolean = true;
   quoteCharacterSpans.forEach((characterSpan, index) => {
-    if (inputCharacterArray[index] !== characterSpan.innerText) {
+    if (!inputCharacterArray[index]) {
+      characterSpan.classList.remove(quoteCharacterClassName.correct);
+      characterSpan.classList.remove(quoteCharacterClassName.incorrect);
+      correct = false;
+    } else if (inputCharacterArray[index] === characterSpan.innerText) {
+      characterSpan.classList.add(quoteCharacterClassName.correct);
+      characterSpan.classList.remove(quoteCharacterClassName.incorrect);
+    } else {
+      characterSpan.classList.remove(quoteCharacterClassName.correct);
+      characterSpan.classList.add(quoteCharacterClassName.incorrect);
       correct = false;
     }
   });
