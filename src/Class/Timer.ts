@@ -9,7 +9,7 @@ class Timer {
     this.timer = null;
   }
 
-  startTimer(startDate: Date): void {
+  startTimer(startDate: Date): number {
     this.timerElement.innerText = "0";
     this.clearTimer();
 
@@ -19,6 +19,8 @@ class Timer {
         (currentDate.getTime() - startDate.getTime()) / 1000
       )}`;
     }, TIMER_UPDATE_INTERVAL);
+
+    return this.timer;
   }
 
   clearTimer(): void {
