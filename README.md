@@ -41,3 +41,8 @@ The copyright of [Favicon](https://fonts.google.com/icons?selected=Material+Symb
 - Personal Email: mryesung1@gmail.com
 - Public Email: yeseonk@uci.edu
 - Phone: (+1) 949-836-1299
+
+## Takeaways
+
+- Refined understanding of the critical role of maintaining type-safety through leveraging TypeScript functionalities to optimize coding practices.
+- Engineered a refined timer functionality, meticulously evaluating the variance between the current and initial dates to guarantee precise updates and functionality.
